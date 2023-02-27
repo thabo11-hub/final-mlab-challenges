@@ -1,63 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Loopstudios landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Careers
-  Events
-  Products
-  Support
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-1">
+      <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="" />
+        <nav class="header-navigation" data-mobile-navigation>
+          <ul role="list">
+            <li><a h-ref="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu">
+          <button class="burger-btn" data-burger-menu>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
+      </header>
+      <div class="main_text">
+        <p class="uppercase">Immersive experiences that deliver</p>
+      </div>
+    </section>
+    <main>
+      <section class="section2">
+        <img class="image-mobile" src="./images/mobile/image-interactive.jpg" alt="" />
+        <img class="image-pc" src="./images/desktop/image-interactive.jpg" alt="" />
+        <div class="section-context">
+          <h2 class="uppercase">The leader in interactive VR</h2>
+          <p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
+        </div>
+      </section>
 
-  Immersive experiences that deliver
+      <section class="section3">
+        <h2 class="uppercase">our creations</h2>
+        <div class="image-container">
+          <div class="image deep-earth">
+            <span class="uppercase">deep <br />earth</span>
+          </div>
+          <div class="image night-arcade">
+            <span class="uppercase"
+              >night <br />
+              arcade</span
+            >
+          </div>
+          <div class="image soccer-team">
+            <span class="uppercase"
+              >soccer <br />
+              team vr</span
+            >
+          </div>
+          <div class="image the-grid"><span class="uppercase">the grid</span></div>
+          <div class="image from-up">
+            <span class="uppercase"
+              >from up<br />
+              above br</span
+            >
+          </div>
+          <div class="image pocket-borealis">
+            <span class="uppercase"
+              >pocket <br />
+              borealis</span
+            >
+          </div>
+          <div class="image the-curiosity">
+            <span class="uppercase">the <br />curiosity</span>
+          </div>
+          <div class="image make-it">
+            <span class="uppercase">make it <br />fisheye</span>
+          </div>
+        </div>
+        <button class="see-all-btn uppercase">see all</button>
+      </section>
+    </main>
 
-  The leader in interactive VR
+    <footer>
+      <div class="footer-logo-socials-container">
+        <img src="./images/logo.svg" alt="logo" />
+        <ul role="list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="social-media">
+          <a href="">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+          </a>
+          <a href="">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+          </a>
+          <a href="">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+          </a>
+          <a href="">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+          </a>
+        </div>
+        <p class="copywrite">&copy; 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </footer>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
-
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
-<div class="attribution">
-  Bootcamp 2023 by
-  <a href="https://www.mlab.co.za" target="_blank">CodeTribe</a>. Developed
-  by <a href="#">Your Name Here and link to your portfolio website</a>.
-</div>
-</body>
+    <div class="attribution">
+        Bootcamp by 2023<a href="https://www.mlab.co.za" target="_blank">CodeTribe</a>. Developed by
+        <a href="https://github.com/thabo11-hub" target="_blank">Eldridge</a>.
+      </div>
+   
+  </body>
 </html>
-
-<!-- Source Frontend Mentor: https://www.frontendmentor.io -->
-
