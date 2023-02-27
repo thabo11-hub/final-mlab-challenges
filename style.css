@@ -1,0 +1,578 @@
+/* https://andy-bell.co.uk/a-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select,
+a {
+  font: inherit;
+}
+
+/* custom properties */
+
+:root {
+  --Primary-White: 0 0% 100%;
+  --Primary-Black: 0 0% 0%;
+  --Primary-Dark-Gray: 0 0% 55%;
+  --Primary-Very-Dark-Gray: 0 0% 41%;
+
+  --ff-1: "Alata", sans-serif;
+  --ff-2: "Josefin Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--ff-1);
+}
+
+.section-1 {
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 30rem;
+  background-position: top center;
+  height: 30rem;
+}
+
+.burger-btn {
+  background-image: url(./images/icon-hamburger.svg);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+  transition: background-image 500ms;
+}
+
+.burger-btn.active {
+  background-image: url(./images/icon-close.svg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  /* align-items: center; */
+}
+
+.logo,
+.burger-menu {
+  z-index: 1;
+}
+
+.header-navigation {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background-color: hsl(var(--Primary-Black));
+  opacity: 0;
+  /* visibility: hidden; */
+  transform: translateX(100%);
+  transition: opacity 500ms ease-in-out, transform 300ms;
+}
+.header-navigation.active {
+  /* visibility: visible; */
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.header-navigation > ul {
+  display: grid;
+  gap: 1rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  font-family: var(--ff-2);
+}
+.header-navigation > ul a {
+  color: hsl(var(--Primary-White) / 0.8);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+ul a:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  inset: 120% 0 0 0;
+  /* margin-left: auto; */
+  margin-inline: auto;
+  background-color: hsl(var(--Primary-White));
+}
+
+.main_text {
+  border: 2px solid hsl(var(--Primary-White));
+  color: hsl(var(--Primary-White));
+
+  margin: 3em 1em 0 1em;
+  width: 80%;
+  max-width: 340px;
+  font-family: var(--ff-2);
+  font-size: 2em;
+  padding: 0.55em;
+  overflow: hidden;
+  line-height: 1;
+}
+
+/* section 1 end */
+
+/* section 2 start */
+
+main {
+  padding: 2rem;
+  padding-top: 4rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.image-mobile {
+  margin-inline: auto;
+}
+
+.image-pc {
+  display: none;
+}
+
+.section2 {
+  text-align: center;
+  font-family: var(--ff-2);
+}
+
+.section-context {
+  /* border: 1px solid red; */
+  margin-top: 2.5em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.section-context > h2 {
+  color: black;
+
+  font-weight: 600;
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 5vw, 2rem);
+  /* outline: 1px solid red; */
+}
+
+.section-context > p {
+  color: hsl(var(--Primary-Very-Dark-Gray));
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* section 2 end */
+
+/* section 3 start */
+
+.section3 {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section3 > h2 {
+  text-align: center;
+  font-family: var(--ff-2);
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.image-container {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+.image {
+  /* border: 1px solid red; */
+  position: relative;
+  color: hsl(var(--Primary-White));
+  background-repeat: no-repeat;
+  font-family: var(--ff-2);
+  height: 8rem;
+  /* width: 100px; */
+
+  background-size: cover;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.image:hover > * {
+  color: hsl(var(--Primary-Black));
+  font-weight: 700;
+}
+.image:hover::before {
+  content: "";
+  position: absolute;
+  background-color: hsl(var(--Primary-White) / 0.6);
+  inset: 0;
+  z-index: -1;
+  color: hsl(var(--Primary-Black));
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-color: hsl(var(--Primary-Black)); */
+  background-image: linear-gradient(to left, rgba(255, 2, 2, 0), rgba(0, 0, 0, 0.562));
+  z-index: -2;
+}
+
+.image > span {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.deep-earth {
+  background-image: url(./images/mobile/image-deep-earth.jpg);
+}
+
+.night-arcade {
+  background-image: url(./images/mobile/image-night-arcade.jpg);
+}
+
+.soccer-team {
+  background-image: url(./images/mobile/image-soccer-team.jpg);
+}
+
+.the-grid {
+  background-image: url(./images/mobile/image-grid.jpg);
+}
+
+.from-up {
+  background-image: url(./images/mobile/image-from-above.jpg);
+}
+
+.pocket-borealis {
+  background-image: url(./images/mobile/image-pocket-borealis.jpg);
+}
+
+.the-curiosity {
+  background-image: url(./images/mobile/image-from-above.jpg);
+}
+
+.make-it {
+  background-image: url(./images/mobile/image-fisheye.jpg);
+}
+
+.see-all-btn {
+  /* background-color: red; */
+  margin-inline: auto;
+  font-size: var(--ff-2);
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  padding: 0.5em 2.75em;
+  background-color: transparent;
+  border: 1px solid hsl(var(--Primary-Black));
+}
+.see-all-btn:hover {
+  /* background-color: red; */
+  background-color: hsl(var(--Primary-Black));
+  color: hsl(var(--Primary-White));
+  /* font-family: var(--ff-2); */
+}
+
+/* section 3 end */
+
+/* footer start */
+
+footer {
+  padding: 3.5rem 0;
+  background-color: hsl(var(--Primary-Black));
+  display: grid;
+  place-items: center;
+}
+
+.footer-logo-socials-container > img {
+  width: 9rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-socials-container > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  color: hsl(var(--Primary-White));
+  font-size: 1rem;
+  /* font-weight: 600; */
+  font-family: var(--ff-2);
+}
+
+footer li + li {
+  /* background-color: red; */
+  margin-top: 1rem;
+}
+
+.social-media {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.copywrite {
+  color: hsl(var(--Primary-Dark-Gray));
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 3rem 10rem;
+  }
+  body {
+    /* background-color: red; */
+  }
+  /* section 2 start */
+  .section2 {
+    position: relative;
+  }
+
+  .image-pc {
+    display: block;
+    width: 60%;
+  }
+  .image-mobile {
+    display: none;
+  }
+
+  .section-context {
+    /* border: 1px solid red; */
+    text-align: left;
+    position: absolute;
+    width: 55%;
+    /* max-width: 100px; */
+    bottom: 0;
+    right: 0;
+    background-color: hsl(var(--Primary-White));
+    padding: 3rem 0 0 3rem;
+  }
+
+  .section-context > h2 {
+    font-size: 2.8rem;
+    font-family: var(--ff-2);
+  }
+
+  /* section 2 end start */
+
+  /* section 3 start */
+  .section3 {
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .section3 > h2 {
+    text-align: left;
+  }
+
+  .see-all-btn {
+    grid-column: 2;
+    grid-row: 1;
+    margin-right: 0;
+  }
+
+  .image-container {
+    grid-template-columns: repeat(4, auto);
+    grid-column: span 2;
+  }
+
+  .image {
+    height: 25rem;
+  }
+
+  .image::after {
+    background-image: linear-gradient(rgba(255, 2, 2, 0), rgba(0, 0, 0, 0.562));
+  }
+
+  .deep-earth {
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+  }
+
+  .night-arcade {
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+  }
+
+  .soccer-team {
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+  }
+
+  .the-grid {
+    background-image: url(./images/desktop/image-grid.jpg);
+  }
+
+  .from-up {
+    background-image: url(./images/desktop/image-from-above.jpg);
+  }
+
+  .pocket-borealis {
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+  }
+
+  .the-curiosity {
+    background-image: url(./images/desktop/image-from-above.jpg);
+  }
+
+  .make-it {
+    background-image: url(./images/desktop/image-fisheye.jpg);
+  }
+
+  /* footer section */
+}
+
+/* @media (min-width: 900px) and (max-width: 1200px) {
+ 
+
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+} */
+
+@media (min-width: 690px) {
+  body {
+    /* background-color: red; */
+  }
+
+  .section-1 {
+    background-image: url(./images/desktop/image-hero.jpg);
+    padding: 1.5rem 0 0 3rem;
+    height: 25rem;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+  .header-navigation {
+    position: initial;
+    /* position: fixed; */
+    inset: 0;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .header-navigation > ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .header-navigation > ul a {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    color: hsl(var(--Primary-White));
+  }
+
+  /* section 1 end */
+
+  /* section 2 start */
+
+  /* footer start */
+  footer {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-logo-socials-container > ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  footer li + li {
+    margin-top: 0;
+  }
+}
