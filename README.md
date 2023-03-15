@@ -1,7 +1,9 @@
 # Frontend Mentor - Loopstudios landing page
 
+# Hosted landing page
 https://thabo11-hub.github.io/final-mlab-challenges/
 
+##
 ![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
